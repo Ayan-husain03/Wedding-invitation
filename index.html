@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Zen &amp; Zeba — Our Forever Begins</title>
+<meta name="description" content="The wedding celebration of Zen and Zeba">
+
+<!-- Fonts: Cormorant Garamond (display/serif) + Jost (body/sans) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =====================================================
+     LOADING SCREEN
+===================================================== -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-glow"></div>
+  <div class="loader-inner">
+    <p class="loader-eyebrow">The Wedding Of</p>
+    <div class="loader-names">
+      <span class="loader-name" data-split>Zen</span>
+      <span class="loader-heart">❤</span>
+      <span class="loader-name" data-split>Zeba</span>
+    </div>
+    <div class="loader-bar"><span class="loader-bar-fill"></span></div>
+  </div>
+</div>
+
+<!-- =====================================================
+     GLOBAL DECORATIVE LAYERS (background / cursor / thread)
+===================================================== -->
+<div class="grain"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="bg-atmosphere" id="bgAtmosphere" aria-hidden="true">
+  <div class="stars" id="starsLayer"></div>
+  <div class="hearts-field" id="heartsField"></div>
+  <div class="petals-field" id="petalsField"></div>
+</div>
+
+<!-- Signature element: The Golden Thread — two lines representing two hearts, converging into one destiny -->
+<svg class="thread-svg" id="threadSvg" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="threadGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8C9A0"/>
+      <stop offset="50%" stop-color="#C9A08A"/>
+      <stop offset="100%" stop-color="#D9B382"/>
+    </linearGradient>
+  </defs>
+  <path id="threadLeft" fill="none" stroke="url(#threadGrad)" stroke-width="1.4" opacity="0.55"/>
+  <path id="threadRight" fill="none" stroke="url(#threadGrad)" stroke-width="1.4" opacity="0.55"/>
+</svg>
+
+<!-- Floating music control -->
+<button class="music-btn" id="musicBtn" aria-label="Toggle background music">
+  <span class="music-icon">♪</span>
+</button>
+<audio id="bgAudio" loop preload="none">
+  <!-- Placeholder: replace with your own licensed audio file -->
+  <source src="PASTE-YOUR-AUDIO-FILE-URL-HERE.mp3" type="audio/mpeg">
+</audio>
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+<main id="main">
+
+  <!-- ============== HERO SECTION ============== -->
+  <section class="section hero" id="hero">
+    <div class="hero-frame">
+      <p class="eyebrow reveal-up">Two Souls · One Story</p>
+      <h1 class="hero-title">
+        <span class="line" data-split>Our Forever</span>
+        <span class="line italic" data-split>Begins</span>
+      </h1>
+      <div class="hero-names reveal-up">
+        <span>Zen</span>
+        <span class="heart-sep">❤</span>
+        <span>Zeba</span>
+      </div>
+      <p class="hero-sub reveal-up">
+        Two Hearts.<br>
+        One Destiny.<br>
+        One Forever.
+      </p>
+      <a href="#story" class="cta reveal-up">
+        <span>Begin Our Story</span>
+        <i class="cta-arrow">↓</i>
+      </a>
+    </div>
+    <div class="hero-scroll-hint">Scroll</div>
+  </section>
+
+  <!-- ============== MOMENT / PHOTO — Couple Portrait ============== -->
+  <section class="section photo-moment" id="photo-couple">
+    <div class="photo-frame reveal-scale">
+      <div class="photo-placeholder">
+        <span class="photo-label">Couple Photo</span>
+        <span class="photo-sub">Replace with your favourite frame together</span>
+      </div>
+    </div>
+    <p class="photo-caption reveal-up">Every love story is beautiful, but ours is my favourite.</p>
+  </section>
+
+  <!-- ============== LOVE STORY TIMELINE ============== -->
+  <section class="section story" id="story">
+    <div class="section-head">
+      <p class="eyebrow reveal-up">Our Journey</p>
+      <h2 class="section-title reveal-up">The Story So Far</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item" data-side="left">
+        <div class="timeline-node"></div>
+        <div class="timeline-card">
+          <span class="tl-icon">❤</span>
+          <span class="tl-date">23 November</span>
+          <h3 class="tl-title">We met for the very first time.</h3>
+          <p class="tl-text">Little by little, two strangers became friends.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-side="right">
+        <div class="timeline-node"></div>
+        <div class="timeline-card">
+          <span class="tl-icon">❤</span>
+          <span class="tl-date">2 January</span>
+          <h3 class="tl-title">Our hearts chose each other.</h3>
+          <p class="tl-text">This was the day our beautiful relationship began.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-side="left">
+        <div class="timeline-node"></div>
+        <div class="timeline-card">
+          <span class="tl-icon">❤</span>
+          <span class="tl-date">14 August</span>
+          <h3 class="tl-title">Our Nikah</h3>
+          <p class="tl-text">The day we become husband and wife, promising forever.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-side="right">
+        <div class="timeline-node"></div>
+        <div class="timeline-card">
+          <span class="tl-icon">❤</span>
+          <span class="tl-date">14 August</span>
+          <h3 class="tl-title">Dawat-e-Walima</h3>
+          <p class="tl-text">The beginning of our new journey together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== MOMENT / PHOTO — Engagement ============== -->
+  <section class="section photo-moment alt" id="photo-engagement">
+    <div class="photo-frame reveal-scale">
+      <div class="photo-placeholder">
+        <span class="photo-label">Engagement</span>
+        <span class="photo-sub">A moment where promises were whispered</span>
+      </div>
+    </div>
+    <p class="photo-caption reveal-up">And suddenly, all the love songs were about you.</p>
+  </section>
+
+  <!-- ============== SAVE THE DATE / COUNTDOWN ============== -->
+  <section class="section savedate" id="savedate">
+    <p class="eyebrow reveal-up">Save The Date</p>
+    <h2 class="savedate-date" data-split>14 August</h2>
+    <div class="countdown" id="countdown">
+      <div class="cd-unit"><span class="cd-num" id="cdDays">00</span><span class="cd-label">Days</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdHours">00</span><span class="cd-label">Hours</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdMins">00</span><span class="cd-label">Minutes</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdSecs">00</span><span class="cd-label">Seconds</span></div>
+    </div>
+  </section>
+
+  <!-- ============== INVITATION SECTION ============== -->
+  <section class="section invitation" id="invitation">
+    <div class="invite-card reveal-scale">
+      <!-- <p class="invite-bismillah">In The Name of Allah</p> -->
+      <p class="invite-bismillah">بِسْمِ ٱللّٰهِ ٱلرَّحْمٰنِ ٱلرَّحِيمِ</p>
+      <p class="invite-line">With the blessings of Allah,</p>
+      <p class="invite-line">Our families joyfully invite you<br>to celebrate the wedding of</p>
+      <div class="invite-names">
+        <span data-split>Zen</span>
+        <span class="heart-sep">&amp;</span>
+        <span data-split>Zeba</span>
+      </div>
+      <p class="invite-occasion">Nikah &amp; Dawat-e-Walima</p>
+      <div class="invite-details">
+        <div><span class="invite-k">Date</span><span class="invite-v">14 August</span></div>
+        <div><span class="invite-k">Time</span><span class="invite-v">8:00 PM</span></div>
+        <div><span class="invite-k">Venue</span><span class="invite-v">Galaxy Banquet</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== COUPLE SECTION ============== -->
+  <section class="section couple" id="couple">
+    <div class="section-head">
+      <p class="eyebrow reveal-up">With Love</p>
+      <h2 class="section-title reveal-up">The Bride &amp; The Groom</h2>
+    </div>
+    <div class="couple-grid">
+      <div class="couple-card reveal-left">
+        <div class="couple-photo"><span>Bride</span></div>
+        <h3 class="couple-name">Zeba</h3>
+        <p class="couple-role">Address</p>
+        <p class="couple-address">Zen's Heart ❤</p>
+      </div>
+      <div class="couple-divider">
+        <span class="heart-sep big">❤</span>
+      </div>
+      <div class="couple-card reveal-right">
+        <div class="couple-photo"><span>Groom</span></div>
+        <h3 class="couple-name">Zen</h3>
+        <p class="couple-role">Address</p>
+        <p class="couple-address">Zeba's Heart ❤</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== MOMENT / PHOTO — Wedding Portrait ============== -->
+  <section class="section photo-moment" id="photo-wedding">
+    <div class="photo-frame reveal-scale">
+      <div class="photo-placeholder">
+        <span class="photo-label">Wedding Portrait</span>
+        <span class="photo-sub">The frame that will hang in our home forever</span>
+      </div>
+    </div>
+    <p class="photo-caption reveal-up">You are my today, my tomorrow, and my forever.</p>
+  </section>
+
+  <!-- ============== EVENT LOCATION ============== -->
+  <section class="section location" id="location">
+    <div class="section-head">
+      <p class="eyebrow reveal-up">Find Us</p>
+      <h2 class="section-title reveal-up">📍 Event Location</h2>
+    </div>
+    <div class="map-frame reveal-scale">
+      <!--
+        PLACEHOLDER: paste your Google Maps EMBED URL in the iframe src below.
+        Google Maps → Share → Embed a map → copy the src="..." URL.
+      -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=PASTE-YOUR-GOOGLE-MAPS-EMBED-URL-HERE"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="Event Location Map"></iframe><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60322.66690894886!2d72.80818514863279!3d19.10034230000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c86e547254a3%3A0x1f29ed9cc3c78d8d!2sGalaxy%20Banquet!5e0!3m2!1sen!2sin!4v1783408796815!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    <a href="https://maps.app.goo.gl/DCAYeyJHd18t6Lam9" target="_blank" rel="noopener" class="cta small reveal-up">
+      <span>Open in Google Maps</span>
+      <i class="cta-arrow">↗</i>
+    </a>
+  </section>
+
+  <!-- ============== EVENT DETAILS ============== -->
+  <section class="section details" id="details">
+    <div class="section-head">
+      <p class="eyebrow reveal-up">Join Us</p>
+      <h2 class="section-title reveal-up">Event Details</h2>
+    </div>
+    <div class="details-grid">
+      <div class="detail-card reveal-up">
+        <h3 class="detail-title">Nikah</h3>
+        <ul class="detail-list">
+          <li><span>Date</span><span>14 August</span></li>
+          <li><span>Time</span><span>10:00 AM</span></li>
+          <li><span>Venue</span><span>Gulistan Masjid</span></li>
+          <!-- <li><span>Dress Code</span><span>[ Add Dress Code ]</span></li> -->
+        </ul>
+      </div>
+      <div class="detail-card reveal-up">
+        <h3 class="detail-title">Walima</h3>
+        <ul class="detail-list">
+          <li><span>Date</span><span>14 August</span></li>
+          <li><span>Time</span><span>8:00 PM</span></li>
+          <li><span>Venue</span><span>Galaxy Banquet</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ROMANTIC QUOTES ============== -->
+  <section class="section quotes" id="quotes">
+    <div class="quote-track" id="quoteTrack">
+      <blockquote class="quote-item">“And suddenly, all the love songs were about you.”</blockquote>
+      <blockquote class="quote-item">“You are my today, my tomorrow, and my forever.”</blockquote>
+      <blockquote class="quote-item">“Every love story is beautiful, but ours is my favorite.”</blockquote>
+    </div>
+  </section>
+
+  <!-- ============== FINAL SECTION ============== -->
+  <section class="section finale" id="finale">
+    <p class="finale-pre reveal-up">Thank you</p>
+    <h2 class="finale-title" data-split>for being a part of our forever.</h2>
+    <div class="finale-names reveal-up">
+      <span>Zen</span>
+      <span class="heart-sep">❤</span>
+      <span>Zeba</span>
+    </div>
+    <p class="finale-forever reveal-up">Forever.</p>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="footer">
+    <p>Made with ❤ — For Our Forever</p>
+  </footer>
+
+</main>
+
+<!-- Libraries: GSAP + ScrollTrigger + Lenis -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
